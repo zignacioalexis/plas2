@@ -499,27 +499,27 @@ def production_calculator_page():
 
             # Cambios de rollo y producto son comunes a todos los tipos
             interrupciones["cambios_rollo"] = st.number_input(
-                "Cambios de rollo", min_value=0, max_value=25, value=0, step=1
+                "Cambios de rollo", min_value=0, max_value=100, value=0, step=1
             )
             interrupciones["cambios_producto"] = st.number_input(
-                "Cambios de producto", min_value=0, max_value=25, value=0, step=1
+                "Cambios de producto", min_value=0, max_value=100, value=0, step=1
             )
 
             # Cambios específicos según el tipo de máquina
             if machine_config["type"] in ["Manual", "Semi-Automática"]:
                 interrupciones["cambios_cuchillo"] = st.number_input(
-                    "Cambios de cuchillo", min_value=0, max_value=25, value=0, step=1
+                    "Cambios de cuchillo", min_value=0, max_value=100, value=0, step=1
                 )
                 interrupciones["cambios_perforador"] = st.number_input(
-                    "Cambios de perforador", min_value=0, max_value=25, value=0, step=1
+                    "Cambios de perforador", min_value=0, max_value=100, value=0, step=1
                 )
                 interrupciones["cambios_paquete"] = st.number_input(
-                    "Cambios de paquete", min_value=0, max_value=25, value=0, step=1
+                    "Cambios de paquete", min_value=0, max_value=100, value=0, step=1
                 )
 
             if machine_config["type"] == "Manual":
                 interrupciones["cambios_empaque"] = st.number_input(
-                    "Cambios de empaque", min_value=0, max_value=25, value=0, step=1
+                    "Cambios de empaque", min_value=0, max_value=100, value=0, step=1
                 )
 
     # Obtener parámetros de la máquina
