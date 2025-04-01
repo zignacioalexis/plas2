@@ -637,7 +637,7 @@ def main():
             st.rerun()
 
         st.markdown("---")
-        st.markdown("Desarrollado por Claude 3.7 Sonnet")
+
 
     # Mostrar la página correspondiente
     if st.session_state.current_page == "calculator":
